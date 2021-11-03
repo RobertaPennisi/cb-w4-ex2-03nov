@@ -14,28 +14,24 @@ const render = ((container, items) => {
                     </li>` 
         }
 });
-console.log(elements)
 const content = elements.join('');
 container.innerHTML = content;
 }); //qui finisce la funzione render
+
+const removeItem = ((container, items) => {
+    items.addEventListener('click', () => {
+        data.pop();
+        return container.lastChild.remove();
+    });
+}); //qui finisce la funzione removeItem
 
 document.addEventListener('DOMContentLoaded', () => {
     const list = q('ul');
     const buttonRemove = q('button');
 
     render(list, data);
-
+    removeItem(list, buttonRemove);
 });
 
-// const removeItem = ((container, items) => {
-//     q('button').addEventListener('click', () => {
-//         data.pop();
-//         return q('ul').lastChild.remove();
-//     });
-// });
 
-q('button').addEventListener('click', () => {
-    data.pop();
-    return q('ul').lastChild.remove();
-});
 

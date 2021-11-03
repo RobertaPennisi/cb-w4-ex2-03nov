@@ -2,9 +2,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
-    background: linear-gradient(-45deg, #0f0f0f, #000000, #35001f, #c41f79);
+    background: linear-gradient(-45deg, #000000, #0a0a0a, #35001f, #c41f79);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
@@ -20,7 +20,7 @@ body {
 }
 
 main{
-    max-width: 990px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 30px;    
 }
@@ -29,17 +29,9 @@ main h1{
     margin-bottom: 50px;
 }
 
-
-form label {
-    display: block;
-    margin: 10px 0;
-}
-
 main ul{
     list-style-type: none;
     padding-inline-start: 0;
-    background: rgba(204, 204, 204, 0.308);
-    border-radius: 10px;
     padding: 20px;
 
 }
@@ -47,8 +39,14 @@ main ul li{
     color:#fff;
     margin: 10px 0;
     padding: 20px 30px;
+    background: rgba(204, 204, 204, 0.308);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 input[type="checkbox"] { 
     filter: invert(10%) hue-rotate(90deg) brightness(1);
-  }
+}
+label {
+    cursor: pointer;
+}

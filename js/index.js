@@ -18,6 +18,11 @@ const content = elements.join('');
 container.innerHTML = content;
 }); //qui finisce la funzione render
 
+/**
+ * la funzione elimina l'ultimo elemento di un contenitore:
+ * container è il nodo dove rimuovere l'elemento; 
+ * item è ciò che triggera la funzione al click, può essere un bottone o altro; 
+ * objects è l'array di oggetti cui si fa riferimento.*/
 const removeItem = ((container, item, objects) => {
     item.addEventListener('click', () => {
         objects.pop();

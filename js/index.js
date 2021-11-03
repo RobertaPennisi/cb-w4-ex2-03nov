@@ -18,9 +18,9 @@ const content = elements.join('');
 container.innerHTML = content;
 }); //qui finisce la funzione render
 
-const removeItem = ((container, items) => {
-    items.addEventListener('click', () => {
-        data.pop();
+const removeItem = ((container, item, objects) => {
+    item.addEventListener('click', () => {
+        objects.pop();
         return container.lastChild.remove();
     });
 }); //qui finisce la funzione removeItem
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttonRemove = q('button');
 
     render(list, data);
-    removeItem(list, buttonRemove);
+    removeItem(list, buttonRemove, data);
 });
 
 

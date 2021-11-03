@@ -20,7 +20,13 @@ body {
 }
 
 main{
-    margin: 50px;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 30px;    
+}
+main h1{
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 
@@ -32,13 +38,17 @@ form label {
 main ul{
     list-style-type: none;
     padding-inline-start: 0;
-    background: #ccc;
+    background: rgba(204, 204, 204, 0.308);
     border-radius: 10px;
     padding: 20px;
-    display: inline-block;
+
 }
 main ul li{
-    color:#000000;
+    color:#fff;
     margin: 10px 0;
     padding: 20px 30px;
 }
+
+input[type="checkbox"] { 
+    filter: invert(10%) hue-rotate(90deg) brightness(1);
+  }

@@ -21,7 +21,21 @@ container.innerHTML = content;
 
 document.addEventListener('DOMContentLoaded', () => {
     const list = q('ul');
+    const buttonRemove = q('button');
 
     render(list, data);
 
 });
+
+// const removeItem = ((container, items) => {
+//     q('button').addEventListener('click', () => {
+//         data.pop();
+//         return q('ul').lastChild.remove();
+//     });
+// });
+
+q('button').addEventListener('click', () => {
+    data.pop();
+    return q('ul').lastChild.remove();
+});
+
